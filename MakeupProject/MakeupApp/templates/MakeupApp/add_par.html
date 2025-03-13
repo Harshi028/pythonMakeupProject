@@ -1,0 +1,23 @@
+{% extends "MakeupApp/base.html" %} {% block content %}
+<div style="margin-top: 50px"></div>
+<form method="POST">
+  {% csrf_token %}
+
+  <label>Parlour Name:</label>
+  {{ form.Par_name }}
+
+  <label>Makeup Category:</label>
+  {{ form.Makeup_cat }}
+
+  <label>Rating:</label>
+  {{ form.rating }}
+
+  <label>Image:</label>
+  {{ form.img }}
+
+  <label>Address:</label>
+  {{ form.address }}
+
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

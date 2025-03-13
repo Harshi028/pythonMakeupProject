@@ -1,0 +1,34 @@
+{% extends "MakeupApp/base.html" %} {% block content %}
+<div style="margin-top: 50px"></div>
+<table border="1" style="width: 100vw">
+  <tr>
+    <th>Parlour Name</th>
+    <th>Category</th>
+    <th>Rating</th>
+    <th>Image</th>
+    <th>Address</th>
+    <th>View Menu</th>
+  </tr>
+  {% for item in li %}
+  <tr>
+    <td>{{ item.Par_name }}</td>
+    <td>{{ item.Makeup_cat }}</td>
+    <td>{{ item.rating }}/5</td>
+    <td>
+      <img
+        src="{{ item.img }}"
+        alt="Parlour Image"
+        height="100"
+        width="100"
+      />
+    </td>
+    <td>{{ item.address }}</td>
+    <td>
+      <a href="{% url 'MakeupApp:view_menu' item.id %}">
+        <button>View Menu</button>
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makeup Delivery</title>
+  </head>
+  <body style="margin: 0; font-family: Arial, sans-serif;">
+    <nav style="
+        background-color: #333;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      ">
+      <h2 style="color: white; margin: 0;">Makeup Delivery</h2>
+      <div style="display: flex; gap: 15px;">
+        <a href="{% url 'MakeupApp:cusdisplay_par' %}" style="
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+          "
+          onmouseover="this.style.backgroundColor='#777'"
+          onmouseout="this.style.backgroundColor='#555'"
+          >View Restaurants</a>
+        <a href="{% url 'MakeupApp:sign_in' %}" style="
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+          "
+          onmouseover="this.style.backgroundColor='#777'"
+          onmouseout="this.style.backgroundColor='#555'"
+          >Sign In</a>
+        <a href="{% url 'MakeupApp:sign_up' %}" style="
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+          "
+          onmouseover="this.style.backgroundColor='#777'"
+          onmouseout="this.style.backgroundColor='#555'"
+          >Sign Up</a>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+  </body>
+</html>
